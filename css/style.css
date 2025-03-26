@@ -294,7 +294,11 @@ input {
   z-index: 2;
   right: 30%;
 }
-
+@media(max-width:768px){
+  .about .image2 {
+    display: none !important;
+  }
+}
 .heading {
   position: relative;
 }
