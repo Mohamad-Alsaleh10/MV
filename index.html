@@ -60,61 +60,57 @@
 
   <section class="home" id="home">
     <div class="head_container">
-      <div class="box">
-        <div class="text">
-          <h1>مرحباً بك في  منتجع إطلالة الجبل</h1>
-          <p>منتجع اطلالة الجبل للوحدات السكنية الفاخره بمنطقة الشفا
-          </p>
-          <button>معرفة اكثر</button>
+        <div class="box">
+            <div class="text">
+                <h1>مرحباً بك في منتجع إطلالة الجبل</h1>
+                <p>منتجع إطلالة الجبل للوحدات السكنية الفاخرة بمنطقة الشفا</p>
+                <button>معرفة أكثر</button>
+            </div>
         </div>
-      </div>
-      <div class="image">
-        <img src="image/home1.jpg" class="slide">
-      </div>
-      <div class="image_item">
-        <img src="image/home1.jpg" alt="" class="slide active" onclick="img('image/home1.jpg')">
-        <img src="image/home2.jpg" alt="" class="slide" onclick="img('image/home2.jpg')">
-        <img src="image/home3.jpg" alt="" class="slide" onclick="img('image/home3.jpg')">
-        <img src="image/home4.jpg" alt="" class="slide" onclick="img('image/home4.jpg')">
-      </div>
+        <div class="image">
+            <img src="image/home1.jpg" class="slide" id="mainImage">
+        </div>
+        <div class="image_item">
+            <img src="image/home1.jpg" alt="" class="slide active" onclick="img('image/home1.jpg', 0)">
+            <img src="image/home2.jpg" alt="" class="slide" onclick="img('image/home2.jpg', 1)">
+            <img src="image/home3.jpg" alt="" class="slide" onclick="img('image/home3.jpg', 2)">
+            <img src="image/home4.jpg" alt="" class="slide" onclick="img('image/home4.jpg', 3)">
+        </div>
     </div>
-  </section>
-  <script>
-    function img(anything) {
-      document.querySelector('.slide').src = anything;
+</section>
+
+<script>
+    let images = [
+        "image/home1.jpg",
+        "image/home2.jpg",
+        "image/home3.jpg",
+        "image/home4.jpg"
+    ];
+    
+    let currentIndex = 0;
+    let interval;
+
+    function img(src, index) {
+        document.getElementById("mainImage").src = src;
+        currentIndex = index; // Update index
+        resetInterval(); // Restart auto-slide
     }
 
-    function change(change) {
-      const line = document.querySelector('.image');
-      line.style.background = change;
+    function autoSlide() {
+        currentIndex = (currentIndex + 1) % images.length;
+        document.getElementById("mainImage").src = images[currentIndex];
     }
-  </script>
-  <section class="book">
-    <div class="container flex">
-      <div class="input grid">
-        <div class="box">
-          <label>تسجيل الوصول:
-            </label>
-          <input type="date" placeholder="Check-in-Date">
-        </div>
-        <div class="box">
-          <label>تسجيل المغادرة:</label>
-          <input type="date" placeholder="Check-out-Date">
-        </div>
-        <div class="box">
-          <label>البالغون:</label> <br>
-          <input type="number" placeholder="0">
-        </div>
-        <div class="box">
-          <label>الأطفال:</label> <br>
-          <input type="number" placeholder="0">
-        </div>
-      </div>
-      <div class="search">
-        <input type="submit" value="بحث">
-      </div>
-    </div>
-  </section>
+
+    function resetInterval() {
+        clearInterval(interval); // Stop current interval
+        interval = setInterval(autoSlide, 3000); // Restart auto-slide every 3 seconds
+    }
+
+    // Start auto-slide when page loads
+    interval = setInterval(autoSlide, 3000);
+</script>
+
+
   <section class="about top" id="about">
     <div class="container flex">
       <div class="left">
