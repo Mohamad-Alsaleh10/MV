@@ -294,11 +294,7 @@ input {
   z-index: 2;
   right: 30%;
 }
-@media(max-width:768px){
-  .about .image2 {
-    display: none !important;
-  }
-}
+
 .heading {
   position: relative;
 }
@@ -665,5 +661,17 @@ footer li:hover {
 
   .restaurant .flex {
     flex-direction: column-reverse;
+  }
+}
+
+@media(max-width:768px){
+  .home .image img{
+    height: 49%;
+  }
+  .about .image1{
+    width: 92%;
+  }
+  .about .image2{
+    width: 75%;
   }
 }
