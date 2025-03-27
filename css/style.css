@@ -670,9 +670,11 @@ footer li:hover {
   }
   .about .image1{
     width: 92%;
+    height: 275px;
   }
   .about .image2{
-    width: 75%;
+    width: 77%;
+    height: 197px;
   }
   .home p{
     font-size: 12px;
