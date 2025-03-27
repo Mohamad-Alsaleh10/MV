@@ -674,4 +674,34 @@ footer li:hover {
   .about .image2{
     width: 75%;
   }
+  .home p{
+    font-size: 12px;
+  }
+  .home h1 {
+    font-size: 27px;
+}
+    .about p, .home p {
+        margin: 20px 0 0 0;
+    }
+}
+
+
+
+.text h1, .text p {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid white; /* Simulate typing cursor */
+  width: 0;
+  animation: typing 3s steps(40, end) forwards, blink 0.8s infinite;
+}
+
+/* Typing effect */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* Cursor blinking effect */
+@keyframes blink {
+  50% { border-color: transparent; }
 }
