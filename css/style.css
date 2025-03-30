@@ -1057,3 +1057,30 @@ left: 0;
   .book-btn:hover {
     background-color: #e68900;
   }
+
+
+
+  .whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #25D366;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease-in-out;
+  }
+
+  .whatsapp-btn:hover {
+    background-color: #1ebe57;
+  }
+
+  .whatsapp-btn i {
+    font-size: 24px;
+  }
