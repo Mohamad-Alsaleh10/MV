@@ -76,7 +76,7 @@
         <div class="text">
           <h1>مرحباً بك في منتجع إطلالة الجبل</h1>
           <p> منتجع إطلالة الجبل للوحدات السكنية الفاخرة في مدينة الشفا بالطائف </p>
-          <button> احجز الان</button>
+          <button class="book-btn" onclick="scrollToBooking()">احجز الان</button>
         </div>
       </div>
       <div class="image">
@@ -140,8 +140,8 @@
           <p>منتجع إطلالة الجبل بأسلوب راقٍ يتسم بالهدوء والفخامة، حيث يتميز بالحدائق الساحرة والاجواء الطبيعية
             الرائعةً. تتميز الأجنحة بمساحات واسعة وديكورات عصرية، إضافةً إلى الأثاث المريح والإطلالات الرائعة على
             المناظر الطبيعية المحيطة.</p>
-          <button class="btn1">احجز الان</button>
-        </div>
+            <button class="book-btn" onclick="scrollToBooking()">احجز الان</button>
+          </div>
       </div>
     </div>
   </section>
@@ -470,14 +470,19 @@
             }
           }
         })
+
+
+    function scrollToBooking() {
+      document.getElementById("room").scrollIntoView({ behavior: "smooth" });
+    }
       </script>
 
 
 
       <section class="map top">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14131.036667732067!2d85.32395955!3d27.69383745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2snp!4v1637755481449!5m2!1sen!2snp"
-          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59568.95820174893!2d40.34699064842267!3d21.070270175324197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15e9954e2506181d%3A0xb0d5083e64e5cab9!2z2KfZhNi02YHYpyDYp9mE2LPYudmI2K_Zitip!5e0!3m2!1sar!2snl!4v1743376233277!5m2!1sar!2snl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </section>
 
 
