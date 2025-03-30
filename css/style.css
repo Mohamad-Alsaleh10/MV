@@ -320,6 +320,7 @@ input {
 
 .left, .right {
   width: 50%;
+
 }
 
 .about {
@@ -704,6 +705,8 @@ input {
 
   .left, .right {
     width: 100%;
+    top: 97px;
+    position: relative;
   }
 
   .wrapper .text {
@@ -808,7 +811,7 @@ input {
 
 .suites-section {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 15px;
   padding: 20px;
   max-width: 1200px;
@@ -1016,4 +1019,24 @@ input {
     font-size: 0.9em;
     padding: 8px 16px;
   }
+}
+
+
+.fixed-itm{
+  width: 60%;
+  height:60px;
+  border-radius: 50%;
+  background-color: green;
+  position: fixed;
+  left: 30px;
+  top:50%;
+  transform:translateY(-50%);
+}
+
+.fixed-itm{
+position: absolute;
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
 }

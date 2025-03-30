@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>تفاصيل الأجنحة</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8f8;
+      color: #333;
+    }
+
+    .suites-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px 20px;
+      background-color: #004d40;
+    }
+
+    .suite-card {
+      width: 250px;
+      background-color: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .suite-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .suite-btn {
+      background-color: #00796b;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      width: 100%;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .suite-btn:hover {
+      background-color: #004d40;
+    }
+
+    .details-section {
+      padding: 60px 20px;
+      background-color: white;
+    }
+
+    .details-card {
+      max-width: 900px;
+      margin: auto;
+      background-color: #e0f2f1;
+      border-radius: 10px;
+      padding: 30px;
+      margin-bottom: 60px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .details-card h2 {
+      margin-top: 0;
+      color: #00695c;
+    }
+
+    .details-card p {
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .price {
+      font-size: 22px;
+      color: #d32f2f;
+      margin: 10px 0;
+    }
+
+    .whatsapp-btn {
+      display: inline-block;
+      background-color: #25D366;
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 16px;
+      margin-top: 15px;
+      transition: background-color 0.3s;
+    }
+
+    .whatsapp-btn:hover {
+      background-color: #1ebc59;
+    }
+
+    @media (max-width: 768px) {
+      .suite-card {
+        width: 100%;
+      }
+
+      .details-card {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- القائمة الرئيسية -->
+  <section class="suites-section">
+    <div class="suite-card">
+      <img src="./image/images/rooms section/1.jpg" alt="غرفتين وصالة وديوانية">
+      <a href="#suite1"><button class="suite-btn">غرفتين وصالة وديوانية</button></a>
+    </div>
+    <div class="suite-card">
+      <img src="./image/images/rooms section/2.jpg" alt="غرفتين وصالة">
+      <a href="#suite2"><button class="suite-btn">غرفتين وصالة</button></a>
+    </div>
+    <div class="suite-card">
+      <img src="./image/images/rooms section/3.jpg" alt="غرفة وصالة">
+      <a href="#suite3"><button class="suite-btn">غرفة وصالة</button></a>
+    </div>
+    <div class="suite-card">
+      <img src="./image/images/rooms section/4.jpg" alt="غرفة">
+      <a href="#suite4"><button class="suite-btn">غرفة</button></a>
+    </div>
+    <div class="suite-card">
+      <img src="./image/images/rooms section/5.jpg" alt="جناح ذوي الهمم">
+      <a href="#suite5"><button class="suite-btn">جناح ذوي الهمم</button></a>
+    </div>
+  </section>
+
+  <!-- التفاصيل -->
+  <section class="details-section">
+    <div id="suite1" class="details-card">
+      <h2>غرفتين وصالة وديوانية</h2>
+      <p>دلّل نفسك بإقامة مميزة في هذا الجناح الذي يوفّر لك الراحة والخصوصية. الجناح يتكوّن من غرفتي نوم أنيقة، صالة واسعة، ومطبخ مجهز بكل احتياجاتك. بالإضافة إلى دورة مياة خاصة وبلكونة بإطلالة ساحرة على الحديقة، تخلّيك تستمتع بجمال الطبيعة والهواء النقي.<br>
+      هو خيارك الأمثل لإقامة تجمع بين الهدوء والفخامة في قلب مدينة الشفا بطائف.</p>
+      <div class="price">1000 ريال</div>
+      <a href="https://wa.link/0415mn" class="whatsapp-btn" target="_blank">احجز عبر واتساب</a>
+    </div>
+
+    <div id="suite2" class="details-card">
+      <h2>غرفتين وصالة</h2>
+      <p>استمتع بتجربة إقامة راقية في جناح غرفتين وصالة اللي يوفر لك كل وسائل الراحة والرفاهية. الجناح يحتوي على غرفتين نوم مريحة، صالة فسيحة، ومطبخ مجهز بالكامل. يتميز الجناح أيضاً بمسبح خاص لك ولعائلتك، مع مجلس خارجي رائع، وحوش واسع للاستمتاع بالهواء الطلق. ومع دورة مياة إضافية في الحوش، تضمن لك الجناح أقصى درجات الراحة والخصوصية.</p>
+      <div class="price">800 ريال</div>
+      <a href="https://wa.link/0415mn" class="whatsapp-btn" target="_blank">احجز عبر واتساب</a>
+    </div>
+
+    <div id="suite3" class="details-card">
+      <h2>غرفة وصالة</h2>
+      <p>عيش أجواء الرفاهية في هذا الجناح الذي صمم ليوفر لك راحة وخصوصية لا مثيل لها. الجناح يتكون من غرفة ماستر فخمة وصالة واسعة للجلوس والاسترخاء، مع دورة مياة متكاملة، ومطبخ مجهز لتكون كل احتياجاتك بين يديك.</p>
+      <div class="price">500 ريال</div>
+      <a href="https://wa.link/0415mn" class="whatsapp-btn" target="_blank">احجز عبر واتساب</a>
+    </div>
+
+    <div id="suite4" class="details-card">
+      <h2>غرفة</h2>
+      <p>خيارك الذي يجمع اقامة اقتصادية واجواء رائعة في الطبيعة الساحرة. يتكون من غرفة واحدة مع دورة مياه متكاملة ومطبخ مجهز بكل احتياجاتك.</p>
+      <div class="price">300 ريال</div>
+      <a href="https://wa.link/0415mn" class="whatsapp-btn" target="_blank">احجز عبر واتساب</a>
+    </div>
+
+    <div id="suite5" class="details-card">
+      <h2>جناح ذوي الهمم</h2>
+      <p>استمتع بإقامة فاخرة مصممة خصيصاً لتلبية احتياجاتك، حيث تم تجهيز الجناح بكل وسائل الراحة والرفاهية مع مراعاة تامة للتسهيلات والتجهيزات الخاصة بذوي الهمم لتسهيل الحركة والتنقل. تمت مراعاة توفير مداخل مريحة ودورة مياة إضافية في الحوش مصممة لسهولة الاستخدام، مما يضمن لك أقصى درجات الراحة والخصوصية.</p>
+      <div class="price">400 ريال</div>
+      <a href="https://wa.link/0415mn" class="whatsapp-btn" target="_blank">احجز عبر واتساب</a>
+    </div>
+  </section>
+
+</body>
+</html>
