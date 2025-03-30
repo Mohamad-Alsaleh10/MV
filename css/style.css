@@ -711,6 +711,7 @@ input {
 
   .wrapper .text {
     width: 80%;
+    display: none;
   }
 
   .room {
