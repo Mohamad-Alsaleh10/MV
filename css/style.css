@@ -610,7 +610,7 @@ input {
 /*--------------footer--------*/
 /* استايل الفوتر */
 .footer {
-  background-color: #e68900;
+  background-color: #a46406;
   color: white;
   text-align: center;
   padding: 20px 0;
@@ -848,7 +848,7 @@ input {
   top: 50%;
   left: 50%;
   transform: translate(-50% , -50%);
-  background-color: #e68900;
+  background-color: #a46406;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -881,7 +881,7 @@ input {
   font-size: 2.8em;
   font-weight: bold;
   margin-bottom: 10px;
-  color: #e68900;
+  color: #a46406;
   text-transform: uppercase;
   letter-spacing: 2px;
   animation: fadeInDown 1s ease-in-out;
@@ -906,7 +906,7 @@ input {
 /* Facility Card */
 .facility-card {
   background: white;
-  color: #e68900;
+  color: #a46406;
   border-radius: 15px;
   padding: 25px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -950,7 +950,7 @@ input {
 }
 
 .btn:hover {
-  background: #e68900;
+  background: #a46406;
   transform: scale(1.05);
 }
 
@@ -1043,7 +1043,7 @@ left: 0;
 
 
   .book-btn {
-    background-color: #ff9800;
+    background-color: #a46406;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -1055,7 +1055,7 @@ left: 0;
   }
 
   .book-btn:hover {
-    background-color: #e68900;
+    background-color: #a46406;
   }
 
 
