@@ -473,6 +473,13 @@ input {
   font-size: 20px;
 }
 
+@media(max-width:768px){
+  .room p{
+    font-size: 16px;
+
+  }
+}
+
 /*--------------room--------*/
 /*--------------wrapper2--------*/
 .wrapper2 {
