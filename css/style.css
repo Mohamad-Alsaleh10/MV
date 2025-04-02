@@ -98,7 +98,7 @@ header ul li a:hover {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
-  max-width: 1200px;
+  max-width: 600px;
   margin: auto;
 }
 .service-card {
@@ -392,6 +392,7 @@ input {
 /*--------------about--------*/
 /*--------------wrapper--------*/
 .wrapper {
+  display: none;
   background-image: url("../image/ami.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -850,6 +851,10 @@ input {
   height: 340px;
 
   }
+  .suite-btn{
+    padding: 7px !important;
+    font-size: 15px !important;
+  }
 }
 .suite-btn {
   position: absolute;
@@ -1083,6 +1088,7 @@ left: 0;
     gap: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     transition: background 0.3s ease-in-out;
+    z-index: 1111111;
   }
 
   .whatsapp-btn:hover {

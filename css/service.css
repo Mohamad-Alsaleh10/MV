@@ -1,0 +1,146 @@
+li {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  .container {
+    max-width: 80%;
+    margin: auto;
+  }
+  
+.suite-gallery{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .suite-gallery img{
+    width: 30%;
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+
+  }
+  .suite-gallery img:hover{
+    transform: rotateY(10deg) rotateX(10deg);
+    box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.5);
+
+  }
+  .video-container{
+    width:30%;
+  }
+  .video-container .background-video{
+    width:100%;
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+  }
+
+
+  
+/*--------------header--------*/
+header {
+    height: 13vh;
+    background: white;
+    color: black;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100000;
+  }
+  
+  .logo img {
+    width: 150px;
+  }
+  header nav {
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+  }
+  
+  .hambuger {
+    display: none;
+  }
+  
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: black;
+  }
+  
+  header ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10003;
+  }
+  
+  header ul li {
+    margin-left: 3rem;
+  }
+  
+  header ul li a {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: black;
+    transition: 0.5s;
+  }
+  
+  header ul li a:hover {
+    color: #C1B086;
+  }
+  @media only screen and (max-width: 768px) {
+    header ul {
+      display: block;
+      position: fixed;
+      left: -130%;
+      top: 5rem;
+      flex-direction: column;
+      background-color: #fff;
+      width: 100%;
+      border-radius: 10px;
+      text-align: center;
+      transition: 0.5s;
+      box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+      z-index: 20;
+    }
+  
+    header ul.active {
+      left: 0%;
+    }
+  
+    header ul li {
+      margin: 2.5rem 0;
+    }
+  
+    header ul li a {
+      color: black;
+    }
+  
+    .hambuger {
+      display: block;
+      cursor: pointer;
+    }
+  
+    .hambuger.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+  
+    .hambuger.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+  
+    .hambuger.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  }
+  
+  /*--------------header--------*/
+    
