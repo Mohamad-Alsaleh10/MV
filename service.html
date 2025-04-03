@@ -196,7 +196,10 @@
 
 
     </div>
-      <div class="price">1000 ريال</div>
+    <div class="price"> الأيام العادية 1000 ريال</div>
+    <div class="price"> نهاية الأسبوع 1200 ريال</div>
+    <div class="price"> المواسم والعطلات 1600  ريال</div>
+
       <a href="https://wa.link/0415mn" class="whatsapp-btn" target="_blank">احجز عبر واتساب</a>
     </div>
 
@@ -215,8 +218,9 @@
 
 
     </div>
-      <div class="price">800 ريال</div>
-      <a href="https://wa.link/0415mn" class="whatsapp-btn" target="_blank">احجز عبر واتساب</a>
+    <div class="price"> الأيام العادية 800 ريال</div>
+    <div class="price"> نهاية الأسبوع 1000 ريال</div>
+    <div class="price"> المواسم والعطلات 1200  ريال</div>      <a href="https://wa.link/0415mn" class="whatsapp-btn" target="_blank">احجز عبر واتساب</a>
     </div>
 
     <div id="suite3" class="details-card">
@@ -234,10 +238,30 @@
 
 
     </div>
-      <div class="price">500 ريال</div>
-      <a href="https://wa.link/0415mn" class="whatsapp-btn" target="_blank">احجز عبر واتساب</a>
+    <div class="price"> الأيام العادية 500 ريال</div>
+    <div class="price"> نهاية الأسبوع 700 ريال</div>
+    <div class="price"> المواسم والعطلات 800  ريال</div>      <a href="https://wa.link/0415mn" class="whatsapp-btn" target="_blank">احجز عبر واتساب</a>
     </div>
 
+    <div id="suite6" class="details-card">
+      <h2>غرفة</h2>
+      <p>عيش أجواء الرفاهية في هذا الجناح الذي صمم ليوفر لك راحة وخصوصية لا مثيل لها. الجناح يتكون من غرفة ماستر فخمة وصالة واسعة للجلوس والاسترخاء، مع دورة مياة متكاملة، ومطبخ مجهز لتكون كل احتياجاتك بين يديك.</p>
+            
+      <div class="suite-gallery">
+        <img src="./image/images/one room/1.jpg" alt="">
+        <img src="./image/images/one room/4.jpg" alt="">
+        <img src="./image/images/one room/IMG-20250324-WA0036.jpg" alt="">
+        <img src="./image/images/one room/IMG-20250324-WA0037.jpg" alt="">
+        <img src="./image/images/one room/IMG-20250324-WA0038.jpg" alt="">
+        <img src="./image/images/one room/IMG-20250324-WA0064.jpg" alt="">
+
+
+
+    </div>
+    <div class="price"> الأيام العادية 300 ريال</div>
+    <div class="price"> نهاية الأسبوع 400 ريال</div>
+    <div class="price"> المواسم والعطلات 500  ريال</div>      <a href="https://wa.link/0415mn" class="whatsapp-btn" target="_blank">احجز عبر واتساب</a>
+    </div>
 
     <div id="suite5" class="details-card">
       <h2>جناح ذوي الهمم</h2>
@@ -280,6 +304,13 @@
           </video>
 
         </div>
+        <div class="video-container">
+          <video autoplay loop muted playsinline class="background-video">
+            <source src="./image/images/garden/video_2025-03-29_19-35-56.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+
+        </div>
         <img src="./image/images/garden/g1.jpg" alt="">
         <img src="./image/images/garden/photo_2025-03-29_19-27-05.jpg" alt="">
         <img src="./image/images/garden/photo_2025-03-29_19-27-07.jpg" alt="">
@@ -301,5 +332,98 @@
     </div>
   </section>
 
+   <!-- Lightbox -->
+<div class="lightbox-overlay" id="lightboxOverlay">
+  <button class="close-btn">&times;</button>
+  <button class="lightbox-nav prev">&larr;</button>
+  <button class="lightbox-nav next">&rarr;</button>
+  <div class="lightbox-content">
+    <img class="lightbox-img" id="lightboxImage" src="" alt="">
+  </div>
+</div>
+<script>
+  // Lightbox Logic
+  let currentImageIndex = 0;
+  let imagesArray = [];
+
+  const lightboxOverlay = document.getElementById('lightboxOverlay');
+  const lightboxImage = document.getElementById('lightboxImage');
+  const closeBtn = document.querySelector('.close-btn');
+  const prevBtn = document.querySelector('.prev');
+  const nextBtn = document.querySelector('.next');
+
+  // Open Lightbox
+  document.querySelectorAll('.suite-gallery img').forEach(img => {
+    img.addEventListener('click', (e) => {
+      const gallery = Array.from(img.parentElement.children).filter(el => el.tagName === 'IMG');
+      currentImageIndex = gallery.indexOf(img);
+      imagesArray = gallery;
+      updateLightboxImage();
+      lightboxOverlay.style.display = 'flex';
+    });
+  });
+
+  // Update Image
+  function updateLightboxImage() {
+    lightboxImage.src = imagesArray[currentImageIndex].src;
+  }
+
+  // Navigation
+  function showNextImage() {
+    currentImageIndex = (currentImageIndex + 1) % imagesArray.length;
+    updateLightboxImage();
+  }
+
+  function showPrevImage() {
+    currentImageIndex = (currentImageIndex - 1 + imagesArray.length) % imagesArray.length;
+    updateLightboxImage();
+  }
+
+  // Event Listeners
+  closeBtn.addEventListener('click', () => {
+    lightboxOverlay.style.display = 'none';
+  });
+
+  lightboxOverlay.addEventListener('click', (e) => {
+    if (e.target === lightboxOverlay) {
+      lightboxOverlay.style.display = 'none';
+    }
+  });
+
+  prevBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    showPrevImage();
+  });
+
+  nextBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    showNextImage();
+  });
+
+  // Keyboard Navigation
+  document.addEventListener('keydown', (e) => {
+    if (lightboxOverlay.style.display === 'flex') {
+      if (e.key === 'ArrowLeft') showPrevImage();
+      if (e.key === 'ArrowRight') showNextImage();
+      if (e.key === 'Escape') lightboxOverlay.style.display = 'none';
+    }
+  });
+
+  // Touch Swipe
+  let touchStartX = 0;
+  lightboxOverlay.addEventListener('touchstart', (e) => {
+    touchStartX = e.touches[0].clientX;
+  });
+
+  lightboxOverlay.addEventListener('touchend', (e) => {
+    const touchEndX = e.changedTouches[0].clientX;
+    const diffX = touchStartX - touchEndX;
+
+    if (Math.abs(diffX) > 50) {
+      if (diffX > 0) showNextImage();
+      else showPrevImage();
+    }
+  });
+</script>
 </body>
 </html>
