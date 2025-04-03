@@ -393,7 +393,7 @@ input {
 /*--------------wrapper--------*/
 .wrapper {
   display: none;
-  background-image: url("../image/ami.jpg");
+  /* background-image: url("../image/ami.jpg"); */
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -679,6 +679,9 @@ input {
 
 /*--------------footer--------*/
 @media only screen and (max-width:768px) {
+  .wrapper {
+    display: block !important;
+  }
   .home .box .text {
     max-width: 100%;
   }
@@ -851,10 +854,7 @@ input {
   height: 340px;
 
   }
-  .suite-btn{
-    padding: 7px !important;
-    font-size: 15px !important;
-  }
+
 }
 .suite-btn {
   position: absolute;
@@ -1098,3 +1098,26 @@ left: 0;
   .whatsapp-btn i {
     font-size: 24px;
   }
+
+
+  /* Replace the existing background-image CSS with: */
+.container-with-video {
+  position: relative;
+  width: 100%;
+  height: 900px;
+  overflow: hidden;
+}
+
+.background-video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* Add content styling on top of video */
+.content-over-video {
+  position: relative;
+  z-index: 1;
+  color: white;
+  /* Add other text styling */
+}
